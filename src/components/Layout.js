@@ -20,9 +20,12 @@ const Layout = () => {
           </nav>
         </header>
       </div>
-      <Outlet />
+      
+        <Outlet />
+      
       <footer>
         &#169;
+        {" "}
         <a href="https://github.com/kofdan" className="black">
           Merlikov Vasilii
         </a>{" "}

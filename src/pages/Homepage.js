@@ -1,48 +1,43 @@
+import { useEffect, useState } from "react";
+
 import Card from "../components/Card";
 
-const arr = [
-  {
-    id: 1,
-    imgPath: "./img/img1.jpg",
-    title: "Первый товар",
-    description: "Первый товар очень первый товар",
-    price: 1234.22
-  },
-  {
-    id: 2,
-    imgPath: "./img/img1.jpg",
-    title: "Второй товар",
-    description: "Второй товар очень первый товар",
-    price: 1234.22
-  },
-  {
-    id: 3,
-    imgPath: "./img/img1.jpg",
-    title: "Третий товар",
-    description: "Третий товар очень первый товар",
-    price: 1234.22
-  },
-  {
-    id: 4,
-    imgPath: "./img/img1.jpg",
-    title: "Четвертый товар",
-    description: "Четвертый товар очень первый товар",
-    price: 1234.22
-  }
-];
+
 
 function Homepage() {
+
+
+
+
+
+  // useEffect( () => {
+  //   fetch('https://fakestoreapi.com/products')
+  //   .then(res=>res.json())
+  //   .then(result => {
+  //     setItems(result)
+  //   })
+  // }, [] )
+  const [products, setProducts] = useState([]);
+
+  useEffect( () => {
+      fetch('https://fakestoreapi.com/products')
+      .then(res=>res.json())
+      .then(data => {
+        setProducts(data)
+      })
+    }, [] )
   return (
     <>
       <div className="card">
-        {arr.map((obj) => (
+        {
+        products.map(obj => (
           <Card
-            key={obj.id}
-            title={obj.title}
-            imgPath={obj.imgPath}
-            price={obj.price}
-            id={obj.id}
-          />
+          key={obj.id}
+          title={obj.title}
+          imgPath={obj.image}
+          price={obj.price}
+          id={obj.id}
+        />
         ))}
       </div>
     </>

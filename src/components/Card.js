@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
 
 function Card({ imgPath, title, price, id }) {
   return (
@@ -7,9 +7,11 @@ function Card({ imgPath, title, price, id }) {
         <img src={imgPath} alt={title} />
         <h3>{title}</h3>
         <p>Стоимость: {price}</p>
-        <Button variant="contained" name={id}>
+
+        <Button href={id} variant="contained" name={id}>
           Купить:
-        </Button>
+          </Button>
+          
       </div>
     </>
   );
