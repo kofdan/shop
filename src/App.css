@@ -37,23 +37,23 @@
   }
 }
 
-a{
+a {
   text-decoration: none;
   color: #fff;
 }
 
-.active-link{
+.active-link {
   color: rgba(6, 142, 253, 0.993);
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   max-width: 100%;
   background-color: #000;
   height: 75px;
 }
-.headerNav{
+.headerNav {
   max-width: 900px;
   width: 900px;
   margin: 0 auto;
@@ -63,10 +63,10 @@ header{
   justify-content: space-between;
 }
 
-.card img{
+.card img {
   width: 150px;
 }
-.card{
+.card {
   margin: 0 auto;
   margin-top: 5%;
   max-width: 1200px;
@@ -75,10 +75,12 @@ header{
   justify-content: space-around;
 }
 
-.cardWrapper{
+.cardWrapper {
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+}
+.black {
+  color: #000;
 }
