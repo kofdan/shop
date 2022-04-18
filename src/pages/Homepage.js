@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
-
 import Card from "../components/Card";
+import Dbconnect from "../hooks/Dbconnect";
+import Nothingfound from "./Nothingfound";
 
 function Homepage() {
-  const [products, setProducts] = useState([]);
+  const { data, loading, error } = Dbconnect(
+    "https://fakestoreapi.com/products"
+  );
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, []);
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <Nothingfound />;
+
   return (
     <>
       <div className='card'>
-        {products.map((obj) => (
+        {data?.map((obj) => (
           <Card
             key={obj.id}
             title={obj.title}
             imgPath={obj.image}
             price={obj.price}
-            id={obj.id}
+            id={obj?.id}
           />
         ))}
       </div>
