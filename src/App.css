@@ -98,13 +98,13 @@ body,
 .card {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin: 0 auto;
+  width: 750px;
 }
 
 .cardWrapper {
-  width: 20%;
-  height: 350px;
+  width: 50%;
+  height: auto;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -131,4 +131,28 @@ body,
 }
 .singleProduct img {
   width: 350px;
+}
+
+.active {
+  display: block;
+}
+
+.noActive {
+  display: none;
+}
+.single_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.single_body__product {
+  width: 50%;
+}
+.single_body__reviews {
+  width: 50%;
+}
+.single_body__review {
+  border: 1px solid grey;
+  margin-bottom: 2%;
+  border-radius: 15px;
 }
