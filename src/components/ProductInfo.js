@@ -1,4 +1,4 @@
-function Modal({ rate, text, created_at }) {
+function productInfo({ rate, text, created_at }) {
   return (
     <>
       <div className='single_body__review'>
@@ -10,4 +10,4 @@ function Modal({ rate, text, created_at }) {
   );
 }
 
-export default Modal;
+export default productInfo;

@@ -4,7 +4,7 @@ function Card({ img, title, text, id }) {
   const url = "http://smktesting.herokuapp.com/";
   return (
     <>
-      <div className='cardWrapper'>
+      <div className='card-wrapper'>
         <img src={`${url}static/${img}`} alt={title} />
         <h3>{title}</h3>
         <p>{text}</p>

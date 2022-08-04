@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import useConnect from "../hooks/useConnect";
 
-import Modal from "../components/Modal";
+import ProductInfo from "../components/ProductInfo";
 import SingleCard from "../components/SingleCard";
 
 const Singlepage = () => {
@@ -18,7 +18,6 @@ const Singlepage = () => {
   const goBack = () => navigate(-1);
   const currentProductId = +id;
   const product = data?.find(({ id }) => id === currentProductId);
-  console.log(product);
   useEffect(() => {
     fetch(`${url}reviews/${id}`)
       .then((res) => res.json())
@@ -28,7 +27,7 @@ const Singlepage = () => {
   }, [url, id]);
 
   return (
-    <div className='singleProduct'>
+    <div className='single-product'>
       <>
         <div className='single_body'>
           {product && (
@@ -38,9 +37,21 @@ const Singlepage = () => {
               text={product.text}
             />
           )}
+
           <div className='single_body__reviews'>
+            <div>
+              <form>
+                <textarea
+                  aria-label='Demo input'
+                  placeholder='Type something...'
+                />
+              </form>
+              <Button variant='contained' color='success'>
+                Send Review
+              </Button>
+            </div>
             {reviews?.map((obj) => (
-              <Modal
+              <ProductInfo
                 key={obj.id}
                 id={obj.id}
                 product={obj.product}
