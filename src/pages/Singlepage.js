@@ -1,16 +1,18 @@
-import { useNavigate } from "react-router-dom";
-import Button from "@mui/material/Button";
+import { useNavigate, useParams } from "react-router-dom";
 import { Nothingfound } from "../pages/Nothingfound";
 
 import useConnect from "../hooks/useConnect";
 
-import ProductInfo from "../components/ProductInfo";
+// import ProductInfo from "../components/ProductInfo";
 import SingleCard from "../components/SingleCard";
+
+const URL = "https://smktesting.herokuapp.com/api/products";
 
 const Singlepage = () => {
   const navigate = useNavigate();
-  const { data, loading, error, id, reviews } = useConnect();
+  const { data, loading, error } = useConnect(URL);
   const goBack = () => navigate("/");
+  const { id } = useParams();
   const currentProductId = +id;
   const product = data?.find(({ id }) => id === currentProductId);
   if (loading) return <h1>Loading...</h1>;
@@ -27,7 +29,7 @@ const Singlepage = () => {
             />
           )}
 
-          <div className="single_body__reviews">
+          {/* <div className="single_body__reviews">
             <div>
               <form>
                 <textarea
@@ -35,9 +37,9 @@ const Singlepage = () => {
                   placeholder="Type something..."
                 />
               </form>
-              <Button variant="contained" color="success">
+              <button variant="contained" color="success">
                 Send Review
-              </Button>
+              </button>
             </div>
             {reviews?.map((obj) => (
               <ProductInfo
@@ -49,7 +51,7 @@ const Singlepage = () => {
                 created_at={obj.created_at}
               />
             ))}
-          </div>
+          </div> */}
         </div>
         <button onClick={goBack}>Back</button>
       </>

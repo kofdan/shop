@@ -1,9 +1,10 @@
 import Card from "../components/Card";
 import useConnect from "../hooks/useConnect";
 import Nothingfound from "./Nothingfound";
-
+const URL = "https://smktesting.herokuapp.com/api/products";
 function Homepage() {
-  const { data, loading, error } = useConnect();
+  const { data, loading, error } = useConnect(URL);
+
   if (loading) return <h1>Loading...</h1>;
   if (error) return <Nothingfound />;
   return (
