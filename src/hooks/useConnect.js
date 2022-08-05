@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const URL = "https://smktesting.herokuapp.com/api/products/?format=json";
 
 function useConnect() {
   const [data, setData] = useState(null);
@@ -8,11 +7,15 @@ function useConnect() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const URL = "https://smktesting.herokuapp.com/api";
+  const { id } = useParams();
+  const PRODUCTS = `${URL}/products/`;
+  const REVIEWS = `${URL}/reviews/${id}`;
 
   useEffect(() => {
     setLoading(true);
-    fetch(URL)
-      .then((res) => res.json())
+    fetch(PRODUCTS)
+      .then((data) => data.json())
       .then((data) => {
         setData(data);
       })
@@ -22,13 +25,10 @@ function useConnect() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [PRODUCTS]);
 
-  const { id } = useParams();
-
-  const REVIEWS = `https://smktesting.herokuapp.com/api/reviews/`;
   useEffect(() => {
-    fetch(`${REVIEWS}${id}?format=json`)
+    fetch(REVIEWS)
       .then((reviews) => reviews.json())
       .then((reviews) => {
         setReviews(reviews);

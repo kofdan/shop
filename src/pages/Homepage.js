@@ -11,7 +11,7 @@ function Homepage() {
       <div className="card">
         {data?.map((obj) => (
           <Card
-            key={obj.id}
+            key={+obj.id}
             title={obj.title}
             img={obj.img}
             id={obj.id}
