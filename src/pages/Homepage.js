@@ -3,15 +3,12 @@ import useConnect from "../hooks/useConnect";
 import Nothingfound from "./Nothingfound";
 
 function Homepage() {
-  const { data, loading, error } = useConnect(
-    "http://smktesting.herokuapp.com/api/products/"
-  );
+  const { data, loading, error } = useConnect();
   if (loading) return <h1>Loading...</h1>;
   if (error) return <Nothingfound />;
-
   return (
     <>
-      <div className='card'>
+      <div className="card">
         {data?.map((obj) => (
           <Card
             key={obj.id}

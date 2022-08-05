@@ -11,3 +11,147 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  padding: 30px;
+  flex: 1 1 auto;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+}
+
+.topNav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.topNav a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+}
+.topNav a:hover {
+  color: blue;
+  transition: all 0.2s;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.2s;
+}
+.footer a:hover {
+  color: green;
+  transition: all 0.2s;
+}
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 750px;
+}
+
+.card-wrapper {
+  width: 50%;
+  height: auto;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  margin: 10px;
+  transition: all 0.25s;
+  transform: scale(1);
+}
+.card-wrapper img {
+  width: 50px;
+}
+.card-wrapper:hover {
+  transform: scale(1.1);
+  transition: all 0.25s;
+}
+.single-product {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.single-product img {
+  width: 350px;
+}
+
+.active {
+  display: block;
+}
+
+.noActive {
+  display: none;
+}
+.single_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.single_body__product {
+  width: 50%;
+}
+.single_body__reviews {
+  width: 50%;
+}
+.single_body__review {
+  border: 1px solid grey;
+  margin-bottom: 2%;
+  border-radius: 15px;
+}
