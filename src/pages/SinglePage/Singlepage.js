@@ -4,6 +4,8 @@ import useConnect from "../../hooks/useConnect";
 import { Nothingfound } from "../../pages/Nothingfound";
 import ProductReviews from "./ProductReviews";
 import SingleCard from "./SingleCard";
+import ReviewsForm from "./ReviewsForm";
+
 import { Button } from "@mui/material";
 
 const URL = "https://smktesting.herokuapp.com/api/products";
@@ -26,6 +28,8 @@ const Singlepage = () => {
 
   return (
     <>
+      <ReviewsForm />
+
       <div style={styles.div}>
         {product && (
           <SingleCard
@@ -35,8 +39,8 @@ const Singlepage = () => {
           />
         )}
         <ProductReviews />
-        <Singlepage />
       </div>
+
       <Button variant="contained" onClick={goBack}>
         Back
       </Button>
