@@ -6,14 +6,14 @@ import { Footer } from "./Footer";
 const Layout = () => {
   return (
     <>
-      <div className='wrapper'>
-        <header className='header'>
+      <div className="wrapper">
+        <header className="header">
           <Header />
         </header>
-        <div className='main'>
+        <div className="main">
           <Outlet />
         </div>
-        <footer className='footer'>
+        <footer className="footer">
           <Footer />
         </footer>
       </div>
