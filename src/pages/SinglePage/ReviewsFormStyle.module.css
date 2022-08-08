@@ -1,0 +1,15 @@
+.rateWrapper {
+  text-decoration: none;
+  display: flex;
+}
+.rateItem {
+  list-style: none;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: url("https://smktesting.herokuapp.com/static/star.gif") 0 0;
+}
+
+.rateItem:hover {
+  background-position: 0 -16px;
+}

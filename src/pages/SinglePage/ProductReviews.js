@@ -10,8 +10,8 @@ const styles = {
     border: "1px solid black",
     borderRadius: "10px",
     marginBottom: "5px",
-    textAlign: "center",
-    listStyle: "none"
+    listStyle: "none",
+    paddingLeft: "15px"
   }
 };
 
@@ -27,8 +27,11 @@ function ProductReviews() {
         <ul style={styles.ul}>
           {reviews?.map((obj) => (
             <li style={styles.li} key={obj.id}>
-              <h3>{obj.text}</h3>
-              <p>{obj.created_at}</p>
+              <p>
+                {obj.username} {obj.created_at}
+              </p>
+              <h3>Comment: {obj.text}</h3>
+              <p>Rate: {obj.rate}</p>
             </li>
           ))}
         </ul>
