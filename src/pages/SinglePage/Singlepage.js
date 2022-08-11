@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import useConnect from "../../hooks/useConnect";
 
-import { Nothingfound } from "../../pages/Nothingfound";
+import { Nothingfound } from "../Nothingfound/Nothingfound";
 import ProductReviews from "./ProductReviews";
 import SingleCard from "./SingleCard";
 import ReviewsForm from "./ReviewsForm";

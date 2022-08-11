@@ -2,11 +2,11 @@ import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
 
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 import Singlepage from "./pages/SinglePage/Singlepage";
-import Loginpage from "./pages/Loginpage";
-import Registrationpage from "./pages/Registrationpage";
-import Nothingfound from "./pages/Nothingfound";
+import Loginpage from "./pages/Loginpage/Loginpage";
+import Registrationpage from "./pages/Registrationpage/Registrationpage";
+import Nothingfound from "./pages/Nothingfound/Nothingfound";
 
 function App() {
   return (

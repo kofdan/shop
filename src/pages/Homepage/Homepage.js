@@ -1,6 +1,6 @@
-import Card from "../components/Card";
-import useConnect from "../hooks/useConnect";
-import Nothingfound from "./Nothingfound";
+import Card from "../../components/Card";
+import useConnect from "../../hooks/useConnect";
+import Nothingfound from "../Nothingfound/Nothingfound";
 const URL = "https://smktesting.herokuapp.com/api/products";
 function Homepage() {
   const { data, loading, error } = useConnect(URL);

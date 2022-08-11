@@ -2,33 +2,33 @@ import { useState } from "react";
 import styles from "./ReviewsFormStyle.module.css";
 
 function ReviewsForm() {
-  const [name, setName] = useState("");
-
+  const [value, setValue] = useState("");
+  const auth = false;
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${name}`);
   };
-
+  const handleBlur = () => {
+    if (value === "") {
+      console.log(123);
+    }
+  };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form
+        className={styles.formBody}
+        onSubmit={handleSubmit}
+        onBlur={handleBlur}
+      >
         <label>
           Enter your name:
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
           />
         </label>
         <input type="submit" />
       </form>
-      <ul className={styles.rateWrapper}>
-        <li className={styles.rateItem}></li>
-        <li className={styles.rateItem}></li>
-        <li className={styles.rateItem}></li>
-        <li className={styles.rateItem}></li>
-        <li className={styles.rateItem}></li>
-      </ul>
     </>
   );
 }
