@@ -1,2 +1,6 @@
-.formBody {
+.error {
+  color: red;
+}
+.succsess {
+  color: green;
 }
