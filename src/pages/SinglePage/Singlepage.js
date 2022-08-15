@@ -26,11 +26,11 @@ const Singlepage = () => {
   const product = data?.find(({ id }) => id === currentProductId);
   if (loading) return <h1>Loading...</h1>;
   if (error) return <Nothingfound />;
-
   return (
     <>
       <ReviewsForm />
       <Rate />
+
       <div style={styles.div}>
         {product && (
           <SingleCard

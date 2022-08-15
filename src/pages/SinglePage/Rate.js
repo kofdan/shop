@@ -1,11 +1,21 @@
+import { useState } from "react";
 import styles from "./Rate.module.css";
 
 const Rate = () => {
+  const [rateHov, setRateHov] = useState(false);
+
   return (
     <div className={styles.starRate}>
       <ul className={styles.starRateWrapper}>
         <li className={styles.starRateItem}>
-          <a className={styles.starRateLink} href=" " data-value="5">
+          <a
+            onMouseEnter={() => setRateHov(true)}
+            onMouseLeave={() => setRateHov(false)}
+            style={{ backgroundPosition: rateHov ? "left -16px" : "left 0" }}
+            className={styles.starRateLink}
+            href=" "
+            data-value="5"
+          >
             <span className={styles.starRateSpan}>5 stars</span>
           </a>
         </li>
