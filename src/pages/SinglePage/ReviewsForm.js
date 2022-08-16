@@ -8,7 +8,6 @@ function ReviewsForm() {
   const [revError, setRevError] = useState(false);
   const [fieldValid, setFieldValid] = useState(false);
   const [dataSend, setDataSend] = useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setValue("");
