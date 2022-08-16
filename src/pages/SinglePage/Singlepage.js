@@ -5,7 +5,6 @@ import { Nothingfound } from "../Nothingfound/Nothingfound";
 import ProductReviews from "./ProductReviews";
 import SingleCard from "./SingleCard";
 import ReviewsForm from "./ReviewsForm";
-import Rate from "./Rate";
 
 import { Button } from "@mui/material";
 
@@ -29,7 +28,6 @@ const Singlepage = () => {
   return (
     <>
       <ReviewsForm />
-      <Rate />
 
       <div style={styles.div}>
         {product && (

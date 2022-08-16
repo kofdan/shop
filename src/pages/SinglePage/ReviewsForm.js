@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+
+import Rate from "./Rate";
 import styles from "./ReviewsFormStyle.module.css";
 
 function ReviewsForm() {
@@ -55,6 +57,7 @@ function ReviewsForm() {
         {revError && (
           <p className={styles.error}>this field must be not empty</p>
         )}
+        <Rate />
       </form>
     </>
   );

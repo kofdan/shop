@@ -1,46 +1,72 @@
-import { useState } from "react";
-import styles from "./Rate.module.css";
+import "./rateStyles.css";
 
 const Rate = () => {
-  const [rateHov, setRateHov] = useState(false);
-
   return (
-    <div className={styles.starRate}>
-      <ul className={styles.starRateWrapper}>
-        <li className={styles.starRateItem}>
-          <a
-            onMouseEnter={() => setRateHov(true)}
-            onMouseLeave={() => setRateHov(false)}
-            style={{ backgroundPosition: rateHov ? "left -16px" : "left 0" }}
-            className={styles.starRateLink}
-            href=" "
-            data-value="5"
-          >
-            <span className={styles.starRateSpan}>5 stars</span>
-          </a>
-        </li>
-        <li className={styles.starRateItem}>
-          <a className={styles.starRateLink} href=" " data-value="4">
-            <span className={styles.starRateSpan}>4 stars</span>
-          </a>
-        </li>
-        <li className={styles.starRateItem}>
-          <a className={styles.starRateLink} href=" " data-value="3">
-            <span className={styles.starRateSpan}>3 stars</span>
-          </a>
-        </li>
-        <li className={styles.starRateItem}>
-          <a className={styles.starRateLink} href=" " data-value="2">
-            <span className={styles.starRateSpan}>2 stars</span>
-          </a>
-        </li>
-        <li className={styles.starRateItem}>
-          <a className={styles.starRateLink} href=" " data-value="1">
-            <span className={styles.starRateSpan}>1 star</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className="simple-rating">
+        <div className="simple-rating__items">
+          <input
+            id="simple-rating__5"
+            type="radio"
+            className="simple-rating__item"
+            name="simple-rating"
+            value="5"
+          />
+          <label
+            htmlFor="simple-rating__5"
+            className="simple-rating__label"
+          ></label>
+
+          <input
+            id="simple-rating__4"
+            type="radio"
+            className="simple-rating__item"
+            name="simple-rating"
+            value="4"
+          />
+          <label
+            htmlFor="simple-rating__4"
+            className="simple-rating__label"
+          ></label>
+
+          <input
+            id="simple-rating__3"
+            type="radio"
+            className="simple-rating__item"
+            name="simple-rating"
+            value="3"
+          />
+          <label
+            htmlFor="simple-rating__3"
+            className="simple-rating__label"
+          ></label>
+
+          <input
+            id="simple-rating__2"
+            type="radio"
+            className="simple-rating__item"
+            name="simple-rating"
+            value="2"
+          />
+          <label
+            htmlFor="simple-rating__2"
+            className="simple-rating__label"
+          ></label>
+
+          <input
+            id="simple-rating__1"
+            type="radio"
+            className="simple-rating__item"
+            name="simple-rating"
+            value="1"
+          />
+          <label
+            htmlFor="simple-rating__1"
+            className="simple-rating__label"
+          ></label>
+        </div>
+      </div>
+    </>
   );
 };
 
