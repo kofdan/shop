@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Button } from "@mui/material";
 
 import Rate from "./Rate";
 import styles from "./ReviewsFormStyle.module.css";
@@ -52,9 +51,7 @@ function ReviewsForm() {
           id="content"
           placeholder="Type your review..."
         ></textarea>
-        <Button disabled={!fieldValid} variant="contained" color="success">
-          Send
-        </Button>
+        <button disabled={!fieldValid}>Send</button>
         {dataSend && <p className={styles.succsess}>Your message send. Thx</p>}
         {revError && (
           <p className={styles.error}>this field must be not empty</p>
